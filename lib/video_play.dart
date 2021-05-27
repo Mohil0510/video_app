@@ -12,9 +12,8 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
   @override
   void initState() {
-    _controller = VideoPlayerController.network(
-      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
-    );
+    _controller = VideoPlayerController.asset('assets/1.mp4');
+
     _initializeVideoPlayerFuture = _controller.initialize();
 
     _controller.setLooping(true);
